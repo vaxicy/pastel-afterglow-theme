@@ -86,13 +86,13 @@ def browser():
 # These browser-controlled colors are distinct from manifest link/header colors.
 css += '''
 .tabs{height:38px;padding-top:5px;gap:5px}.tab{width:185px;height:33px;padding:9px 14px}.tools{height:44px;gap:19px;font-size:20px}.disabled{opacity:.42}
-.omni{height:35px;border:2px solid #7F8DA6;padding:0 8px;gap:10px}.g-icon{background:white;color:#4285F4;font-size:21px;font-weight:bold;width:27px;height:27px;border-radius:50%;display:grid;place-items:center}.address-ai{margin-left:auto;background:var(--toolbar);padding:4px 10px;border-radius:20px;color:#202124}
+.omni{height:35px;border:2px solid #7184A4;padding:0 8px;gap:10px}.g-icon{background:white;color:#4285F4;font-size:21px;font-weight:bold;width:27px;height:27px;border-radius:50%;display:grid;place-items:center}.address-ai{margin-left:auto;background:var(--toolbar);padding:4px 10px;border-radius:20px;color:#202124}
 .bookmarks{height:32px;padding:8px 13px;gap:23px;color:#685B70;border-bottom-color:#D5BEC9}
 .ntp-top{position:absolute;right:22px;top:136px;font-size:13px;color:#303134}
-.content{padding-top:106px}.google{color:#E96C9C;font-size:80px;letter-spacing:-4px;margin-bottom:40px}
+.content{padding-top:106px}.google{color:#E6719B;font-size:80px;letter-spacing:-4px;margin-bottom:40px}
 .search{width:630px;height:48px;background:#FFFFFF;color:#202124;border:1px solid #E5E5E5;padding:0 17px;gap:16px}.search svg{width:17px;height:19px;stroke:#202124}.plus{font-size:26px}.prompt{color:#B2B2B2;font-size:16px}.ai-mode{background:#F3F5F6;border-radius:22px;padding:8px 10px;font-size:12px;white-space:nowrap}
 .ai-cards{display:flex;justify-content:center;gap:12px;margin-top:14px;text-align:left}.ai-cards>div{width:203px;height:48px;border-radius:15px;background:#3C4043;color:#E8F0FE;display:flex;align-items:center;gap:11px;padding:10px 14px}.card-icon{font-size:23px}.ai-cards b{font-weight:normal;font-size:13px;display:block}.ai-cards small{font-size:11px;display:block;margin-top:4px}
-.shortcuts{margin-top:49px;gap:20px}.shortcut{width:76px;color:#685B70;font-size:11px;white-space:nowrap}.circle{width:41px;height:41px;margin-bottom:16px;background:#EE98B8;color:#202124;font-size:26px}.youtube{background:#FF0033;color:white;font-size:13px;border-radius:5px;padding:2px 6px}.store-icon{color:#4285F4;background:#FAF7F9;font-size:24px;line-height:25px}
+.shortcuts{margin-top:49px;gap:20px}.shortcut{width:76px;color:#685B70;font-size:11px;white-space:nowrap}.circle{width:41px;height:41px;margin-bottom:16px;background:#ED9BB8;color:#202124;font-size:26px}.youtube{background:#FF0033;color:white;font-size:13px;border-radius:5px;padding:2px 6px}.store-icon{color:#4285F4;background:#FAF7F9;font-size:24px;line-height:25px}
 .customize{right:12px;bottom:10px;background:#202124;color:#A8C7FA;box-shadow:0 2px 6px #0003;padding:8px 14px}
 .wide .content{padding-top:65px}.wide .google{margin-bottom:25px}.wide .shortcuts{margin-top:34px}
 '''
@@ -130,3 +130,4 @@ with sync_playwright() as p:
         print(f'Rendered {destination}: {w}x{h}')
     engine.close()
 print('Logo validated: logo/logo128.png, 128x128 RGBA')
+

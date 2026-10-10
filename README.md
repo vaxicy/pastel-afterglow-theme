@@ -31,7 +31,16 @@ Pastel Afterglow Theme brings the last soft light of evening to the browser. A m
 | Dusty Rose | `#D291BC` | Accent tone used in the logo and store artwork |
 | Blush Pink | `#FEC8D8` | Accent tone used in the store artwork; inspired the pale blush page |
 
-Deep plum carries all small text, because lavender at this lightness is too low-contrast to read at 12–13px. Pale plum, dusty rose and blush pink live in the logo and artwork rather than on browser chrome. Window button glyphs, hover states and separators are drawn by Chrome and Windows.
+Deep plum carries all small text, because lavender at this lightness is too low-contrast to read at 12–13px. Pale plum, dusty rose and blush pink live in the logo and artwork rather than on browser chrome.
+
+## Chrome UI notes
+
+Not every pixel in the window comes from the manifest — Chrome and the operating system paint some of them — so the store previews follow what a real install renders:
+
+- **Google wordmark on the new tab page:** drawn by Chrome as a single flat tint computed from the new tab background, so it appears soft pink here rather than as the four-colour brand mark.
+- **Shortcut tiles:** Chrome tints the round shortcut buttons the same way, so they pick up the same blush tone instead of a fixed brand colour.
+- **Window buttons, hover fills and separators:** painted by Chrome and Windows, and left in their own neutral tones on the lavender frame.
+- **Address bar:** a white field with Chrome's own focus outline, which stays legible against the creamy peach toolbar.
 
 ## Features
 
@@ -81,7 +90,7 @@ The store listing is in preparation. Until it is live, load the unpacked copy wi
   <img src="https://raw.githubusercontent.com/vaxicy/pastel-afterglow-theme/main/store-assets/promo/440x280.png" width="440" alt="Pastel Afterglow Theme promo tile">
 </p>
 
-These are illustrative HTML/CSS layouts rendered by headless Chromium from the exact `manifest.json` colours, calibrated against a real installed Chrome session. They are not native Chrome captures, so the fine details — window glyphs, hover states, and the tinted Google wordmark — follow your own browser and OS after install.
+These are illustrative English HTML/CSS layouts rendered by headless Chromium and calibrated against a real installed Chrome session. Browser surfaces take their colours from `manifest.json`; the Chrome-painted details — the pink Google wordmark and shortcut tiles, the white search field, the dark AI cards and the dark *Customize Chrome* button — follow the reference browser, and the sampled tones are listed in [`store-assets/ASSET-NOTES.md`](store-assets/ASSET-NOTES.md). Tabs and bookmarks use generic English labels. These are not native captures, so controls and new tab content can vary by browser version and operating system.
 
 ## Files
 
@@ -92,8 +101,10 @@ These are illustrative HTML/CSS layouts rendered by headless Chromium from the e
 | `store-assets/screenshots/en/` | Store listing screenshots (1280x800) |
 | `store-assets/promo/` | Promo tiles (440x280 and 1400x560) |
 | `store-assets/references/` | The browser, introduction and promo mock-up HTML plus their PNG renders |
+| `store-assets/ASSET-NOTES.md` | Calibration notes: which tones are manifest colours and which are sampled from Chrome |
 | `store-assets/store-description.txt` | Store listing description (English) |
 | `scripts/generate-store-assets.py` | Draws the 128px logo and renders every store asset in one pass |
+| `scripts/requirements.txt` | Python dependencies for the asset generator |
 | `scripts/package.ps1` | Builds the complete and upload-only release ZIPs |
 | `PACKAGING.md` | How the upload ZIP is built |
 | `LICENSE` | Non-Commercial License (bilingual) |
