@@ -105,7 +105,7 @@ These are illustrative English HTML/CSS layouts rendered by headless Chromium an
 | `store-assets/store-description.txt` | Store listing description (English) |
 | `scripts/generate-store-assets.py` | Draws the 128px logo and renders every store asset in one pass |
 | `scripts/requirements.txt` | Python dependencies for the asset generator |
-| `scripts/package.ps1` | Builds the complete and upload-only release ZIPs |
+| `scripts/package.ps1` | Builds the release ZIP |
 | `PACKAGING.md` | How the upload ZIP is built |
 | `LICENSE` | Non-Commercial License (bilingual) |
 
@@ -126,7 +126,7 @@ One composer renders all four store assets — both screenshots, both promo tile
 powershell -ExecutionPolicy Bypass -File scripts/package.ps1 -Force
 ```
 
-Writes two ZIPs to the default folder `D:\迅雷下载\vibe coding`, both with `manifest.json` at the archive root: `pastel-afterglow-theme-<version>.zip` (complete project, including store artwork, scripts and documentation) and `pastel-afterglow-theme-<version>-upload.zip` (manifest and logo only, ready for the store upload form). `-Force` overwrites an existing archive.
+Writes one ZIP to the default folder `D:\迅雷下载\vibe coding`: `pastel-afterglow-theme-<version>.zip`, holding the complete project with `manifest.json` at the archive root, so the same archive is what the Chrome Web Store upload form takes. `-Force` overwrites an existing archive.
 
 The screenshots and promo tiles travel inside the complete ZIP, but the store form still needs them uploaded one by one: `store-assets/screenshots/en/` fills the two screenshot slots, `store-assets/promo/1400x560.png` is the marquee tile and `store-assets/promo/440x280.png` is the small tile.
 
