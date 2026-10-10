@@ -1,0 +1,11 @@
+.codebuddy/
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+*.zip
+*.crx
+*.pak
+
+# Scratch file used to pass multi-word commit messages on Windows
+commit_msg.txt

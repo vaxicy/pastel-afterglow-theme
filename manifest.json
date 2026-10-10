@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Pastel Afterglow Theme",
+  "version": "1.0.0",
+  "description": "A soft pastel Chrome theme blending muted lavender, blush pink, and creamy peach for a gentle afterglow.",
+  "icons": {"128": "logo/logo128.png"},
+  "theme": {
+    "colors": {
+      "frame": [149, 125, 173],
+      "frame_inactive": [149, 125, 173],
+      "toolbar": [255, 223, 211],
+      "tab_text": [73, 56, 80],
+      "tab_background_text": [36, 27, 45],
+      "tab_background_text_inactive": [36, 27, 45],
+      "bookmark_text": [73, 56, 80],
+      "toolbar_text": [73, 56, 80],
+      "toolbar_button_icon": [73, 56, 80],
+      "omnibox_background": [255, 247, 243],
+      "omnibox_text": [73, 56, 80],
+      "ntp_background": [252, 238, 243],
+      "ntp_text": [73, 56, 80],
+      "ntp_link": [118, 91, 139],
+      "ntp_header": [118, 91, 139],
+      "button_background": [149, 125, 173]
+    },
+    "properties": {"ntp_logo_alternate": 1}
+  }
+}
